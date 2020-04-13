@@ -248,7 +248,7 @@ LOCAL_MODULE := libarchive
 LOCAL_MODULE_TAGS := optional
 LOCAL_SRC_FILES := $(libarchive_src_files)
 LOCAL_STATIC_LIBRARIES := libz liblz4
-LOCAL_CFLAGS := -DPLATFORM_CONFIG_H=\"$(libarchive_target_config)\"
+LOCAL_CFLAGS := -DPLATFORM_CONFIG_H=\"$(libarchive_target_config)\" -Wno-macro-redefined -Wno-deprecated-declarations -Wno-sign-compare
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/contrib/android/include
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)/libarchive
 include $(BUILD_STATIC_LIBRARY)
@@ -258,7 +258,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := libarchive
 LOCAL_MODULE_TAGS := optional
 LOCAL_C_INCLUDES :=
-LOCAL_CFLAGS := -DPLATFORM_CONFIG_H=\"$(libarchive_target_config)\"
+LOCAL_CFLAGS := -DPLATFORM_CONFIG_H=\"$(libarchive_target_config)\" -Wno-macro-redefined -Wno-deprecated-declarations -Wno-sign-compare
 LOCAL_SHARED_LIBRARIES := libz
 LOCAL_WHOLE_STATIC_LIBRARIES := libarchive
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/contrib/android/include
